@@ -1,0 +1,271 @@
+﻿@model IEnumerable<CasaToro.Novasoft.Fotos.Models.Employee>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Fotos empleados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    @Html.Partial("_Header")
+
+    <main class="d-flex justify-content-between">
+      
+        <!--Zona de filtros-->
+        <div class="col-md-3 custom-lbg container " id="filtersPanel" style="display:flex;align-items:center;flex-direction:column">
+
+            <form method="POST" id="uploadForm" action="/Employee/UploadFile" asp-action="UploadFile" asp-controller="Employee" enctype="multipart/form-data" class="custom-upload-form">
+                    <div id="filename" class="custom-filename">
+                        @if (ViewBag.FileName != null)
+                        {
+                        <span style=" white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">@ViewBag.FileName</span>
+                        }
+                        else
+                        {
+                            <span>...</span>
+                        }
+                    </div>
+                    <div class="custom-upload-btn">
+                        <span style="position: absolute;top: 0;left: 10px;font-size:small">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload m-1" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z" />
+                            </svg>
+                            Subir Archivo
+                        </span>
+                        <input type="file" name="file" accept=".csv, .xlsx, .xls" class="form-control custom-input-upload" id="fileInput" />
+                    </div>
+                </form>
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <p id="errorMessage" style="color:azure" class="m-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                        </svg>
+                            @ViewBag.ErrorMessage
+                    </p>
+                }
+
+			@if (ViewBag.SUccessMessage != null)
+			{
+				<p id="successMessage" style="color:azure" class="m-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#46E301" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                    </svg>
+					@ViewBag.SUccessMessage
+                   
+				</p>
+			}
+            
+            <h1 class="text-light text-center mt-4">Filtros</h1>
+            <form class="container custom-form rounded-3 p-2" id="filterForm" method="POST" action="/Employee/Filter">
+                <div class="col align-items-center">
+                    <div class="mb-2">
+                        <label for="nombre" class="form-label">Nombre o CC</label>
+                        <input type="text" id="nombre" name="nameCc" class="form-control form-control-sm rounded-3 shadow" placeholder="Escribe el nombre o CC" value="@ViewBag.NameCc" onchange="checkForm()">
+                    </div>
+                    <div class="mb-2">
+                        <label for="desde" class="form-label">Desde</label>
+                        <input type="date" id="desde" name="fromDate" class="form-control form-control-sm rounded-3 shadow" value="@ViewBag.FromDate?.ToString("yyyy-MM-dd")" onchange="checkForm()">
+                    </div>
+                    <div class="mb-2">
+                        <label for="hasta" class="form-label">Hasta</label>
+                        <input type="date" id="hasta" name="toDate" class="form-control form-control-sm rounded-3 shadow" value="@ViewBag.ToDate?.ToString("yyyy-MM-dd")" onchange="checkForm()">
+                    </div>
+                    <div class="mb-2">
+                        <label for="businessUnit" class="form-label">Unidad de Negocio</label>
+                        <select id="businessUnit" name="businessUnit" class="form-select form-select-sm rounded-3 shadow" onchange="checkForm()"> 
+                            <option value="93">Selecciona una opción</option>
+                            @if (ViewBag.BusinessUnits != null)
+                            {
+                                @foreach (var unit in ViewBag.BusinessUnits)
+                                {
+                                    <option value="@unit.code" @(unit.code == ViewBag.SelectedBusinessUnit ? "selected" : "")>@unit.name</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-2">
+						<label for="hasCard" class="form-label">¿Tiene Carnet?</label>
+                        <select id="hasCard" name="hasCard" class="form-select form-select-sm rounded-3 shadow" onchange="checkForm()">
+                            <option value="0" @(ViewBag.SelectedHasCard == 0 ? "selected" : "")>Selecciona una opción</option>
+                            <option value="1" @(ViewBag.SelectedHasCard == 1 ? "selected" : "")>Sí</option>
+                            <option value="2" @(ViewBag.SelectedHasCard == 2 ? "selected" : "")>No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <button type="submit" id="applyFilterBtn" class="custom-filter-btn" disabled>Aplicar Filtro</button>
+                    <button type="button" class="custom-clean-filter-btn" onclick="window.location.href='/Employee/Index'">Limpiar filtros</button>
+                </div>
+
+                <p class="custom-result">Resultado: @(Model?.Count() ?? 0)</p>
+                
+            </form>
+     
+            <div class="container" style="width:100%; display:flex;justify-content:center;align-content:center;padding:10px;margin-top:1.5rem;">
+                <button type="button" class="custom-downloadselected-btn" onclick="downloadSelected()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download m-1" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                    </svg>
+                    Descargar Selección
+                </button>
+            </div>
+            <div id="loading" class="custom-loading-container">
+                <span class="loader"></span>
+            </div>
+        </div>
+        <!--Zona de empleados-->
+        <div class="col-md-9 custom-imgbg">
+            <div class="table-responsive custom-table-container m-2" id="tableContainer">
+                       
+                        <table class="table table-bordered table-hover custom-table">
+                            <thead class="table-light">
+                                <tr>
+                            <th><input type="checkbox" id="selectAll" /></th>
+                                    <th>CC</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Fecha Ingreso</th>
+                                    <th>Foto</th>
+                                    <th>Acciones</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    foreach (var employee in Model)
+                                    {
+                                        <tr>
+                                            <td class="align-middle">
+                                                <input type="checkbox" name="selectedEmployees" class="employeeCheckbox" value="@employee.idEmployee" />
+                                            </td>
+                                            <td class="align-middle">@employee.idEmployee</td>
+                                            <td class="align-middle">@employee.nameEmployee</td>
+                                            <td class="align-middle">@employee.surname1Employee @employee.surname2Employee</td>
+                                            <td class ="align-middle">@employee.entryDate</td>
+                                            <td class="align-middle">
+                                                @if (employee.photoEmployee != null)
+                                                {
+                                                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(employee.photoEmployee)" alt="Foto" width="60" height="75" />
+                                                }
+                                                else
+                                                {
+                                                    <span>Sin foto</span>
+                                                }
+                                            </td>
+                                        <td class="align-middle">
+                                                @if(employee.photoEmployee != null){
+                                                    <a href="/Employee/DownloadPhoto?idEmployee=@employee.idEmployee" class="custom-download-btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download m-0" viewBox="0 0 16 16">
+                                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                                                        </svg>
+                                                        Descargar
+                                                    </a>
+                                                }
+
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="7" class="text-center">
+                                            No hay datos para mostrar. 
+                                         </td>
+                                          
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+    </main>
+
+    @Html.Partial("_Footer")
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleccionar todos los checkboxes cuando se carga la página
+            document.querySelectorAll(".employeeCheckbox").forEach(function (checkbox) {
+                checkbox.checked = true;
+            });
+
+            // Manejar el checkbox "Seleccionar todo"
+            document.getElementById("selectAll").addEventListener("change", function (event) {
+                var isChecked = event.target.checked;
+                document.querySelectorAll(".employeeCheckbox").forEach(function (checkbox) {
+                    checkbox.checked = isChecked;
+                });
+            });
+           
+            // Manejar el evento de cambio del input de archivo
+            document.getElementById("fileInput").addEventListener("change", function () {
+                var fileName = this.files[0].name;
+                document.getElementById("filename").innerText = fileName;
+                document.getElementById("loading").style.display = "flex";
+                document.getElementById("uploadForm").submit();
+            });
+
+            // Manejar elemento de carga
+            document.getElementById("filterForm").addEventListener("submit", function () {
+                document.getElementById("loading").style.display = "flex";
+            });
+
+
+            checkForm()
+        });
+
+        function checkForm(){
+            var nameCc = document.getElementById("nombre").value;
+            var fromDate = document.getElementById("desde").value;
+            var toDate = document.getElementById("hasta").value;
+			var hasCard = document.getElementById("hasCard").value;
+            var businessUnit = document.getElementById("businessUnit").value;
+            
+
+            var applyFilterBtn = document.getElementById("applyFilterBtn")
+
+            if(nameCc || fromDate|| toDate  || hasCard|| businessUnit !== "93" ){
+                applyFilterBtn.disabled=false;
+            }else{
+                applyFilterBtn.disabled=true;
+            }
+
+        }
+
+         function downloadSelected() {
+            var selectedEmployees = [];
+            document.querySelectorAll(".employeeCheckbox:checked").forEach(function (checkbox) {
+                selectedEmployees.push(checkbox.value);
+            });
+
+            if (selectedEmployees.length > 0) {
+                var form = document.createElement("form");
+                form.method = "POST";
+                form.action = "/Employee/DownloadSelectedPhotos";
+
+                selectedEmployees.forEach(function (id) {
+                    var input = document.createElement("input");
+                    input.type = "hidden";
+                    input.name = "selectedEmployees";
+                    input.value = id;
+                    form.appendChild(input);
+                });
+                document.body.appendChild(form);
+                form.submit();
+            } else {
+                alert("No hay empleados seleccionados.");
+            }
+        }
+    </script>
+</body>
+</html>

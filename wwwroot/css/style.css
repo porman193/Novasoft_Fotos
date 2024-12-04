@@ -1,0 +1,310 @@
+﻿/* styles.css */
+/* Archivo de estilos personalizado para la configuración de vistas */
+:root {
+    --nav-bg: white;
+    --footer-bg: white;
+    --filters-bg: #E4E6E7;
+    --left-bg: #709DBE;
+    --button-bg: #709DBE;
+    --button-hover-bg: #1659A1;
+}
+
+.body{
+    font-family:roboto;
+
+}
+
+.custom-header {
+    position: relative;
+    z-index: 10;
+    height: 10vh;
+    background-image: url(../images/mosaico.webp);
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+}
+.custom-header h2 {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size:55px;
+ }
+
+.user-initials-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(to left,#4E97D3,#1E384E);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.custom-footer {
+    background-color: var(--footer-bg);
+}
+
+.custom-form {
+    background-color: var(--filters-bg);
+    width:90%;
+}
+
+.custom-lbg {
+    background: linear-gradient(to left,#4E97D3,#1E384E);
+    height: 90vh;
+    overflow: hidden;
+    border-radius: 0px 20px 20px 0px;
+    /*transform: translateX(-100%);*/
+    transition: .4s ease;
+}
+
+
+.hide-icon-container {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: end;
+    margin: 10px;
+}
+
+.hide-icon {
+    background-color: aliceblue;
+}
+    
+
+.custom-lbg:hover {
+    left: 0;
+}
+
+.custom-imgbg {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    padding: 20px;
+    z-index: 1;
+}
+
+.custom-imgbg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/logo-usc-fondo.webp);
+    background-size:40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1; 
+    z-index: -1; 
+}
+
+.custom-result {
+    width:100%;
+    text-align:center;
+    padding:5px;
+}
+.custom-table-container {
+    max-height: 85vh;
+    overflow-y: auto;
+    border: solid 1px #0F3D6E;
+    border-radius:10px;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+.custom-table {
+    width: 100%;
+}
+
+.custom-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.custom-table thead th {
+    text-align: center;
+    font-weight: bold;
+    background:linear-gradient(to bottom,#4E97D3 30%,#1E384E);
+    color:azure;
+    
+}
+
+.custom-table tbody tr td {
+    background-color: transparent;
+    text-align:center;
+}
+
+.custom-download-btn {
+    text-decoration: none;
+    background-color: var(--button-bg);
+    border-radius: 7px;
+    padding: 7px;
+    color: azure;
+    width: 40%;
+    height: 20%;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.custom-download-btn:hover {
+    background-color: var(--button-hover-bg); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
+    color: #fff; 
+}
+
+.custom-downloadselected-btn {
+    padding: 10px;
+    width: 90%;
+    border-radius: 7px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-downloadselected-btn:hover {
+        background-color: #DEDEDE;
+        transform: scale(1);
+        border-color: #DEDEDE;
+}
+
+.custom-filter-btn {
+    width: 30%;
+    background-color: var(--button-bg);
+    border: solid;
+    border-color: var(--button-bg);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-filter-btn:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1);
+    border-color: var(--button-hover-bg);
+    color: #fff;    
+}
+
+.custom-clean-filter-btn {
+    background-color: #6c757d;
+    color: white;
+    border: solid;
+    border-color: #6c757d;
+    border-radius: 7px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out
+}
+.custom-clean-filter-btn:hover {
+    background-color: #5a6268;
+    transform: scale(1);
+    border-color: #5a6268;
+    color: #fff;
+}
+
+.custom-loading-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10%;
+    aspect-ratio: auto;
+
+}
+
+.loader, .loader:before, .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation-fill-mode: both;
+    animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+    color: white;
+    font-size: 7px;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+ }
+
+    .loader:before {
+        left: -3.5em;
+        animation-delay: -0.32s;
+    }
+
+    .loader:after {
+        left: 3.5em;
+    }
+
+@keyframes bblFadInOut {
+    0%, 80%, 100% {
+        box-shadow: 0 2.5em 0 -1.3em
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0
+    }
+}
+
+.custom-upload-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    width: 32%;
+    height: 1.5rem;
+    border-radius: 0px 7px 7px 0px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+.custom-upload-btn:hover {
+    background-color: #DEDEDE;
+    transform: scale(1);
+    border-color: #DEDEDE;
+}
+
+.custom-upload-btn input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding-top: 5%;
+}
+
+.custom-filename {
+    width: 68%;
+    background: white;
+    font-size: 12px;
+    padding: 0.2rem;
+    padding: 0.2rem;
+    border-radius: 7px 0px 0px 7px;
+    border-right: 1px solid;
+}
