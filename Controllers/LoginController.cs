@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using System.DirectoryServices;
-using System.Security.Claims;
+﻿using System.DirectoryServices;
 using System.DirectoryServices.Protocols;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CasaToro.Novasoft.Fotos.Controllers
 {
@@ -85,10 +85,10 @@ namespace CasaToro.Novasoft.Fotos.Controllers
                       authProperties).Wait();
 
                     // Obtener y guardar el nombre del usuario en la sesión
-                   
+
                     HttpContext.Session.SetString("Username", username);
                     HttpContext.Session.SetString("Name", displayName);
-                
+
                     ViewBag.Initials = initials;
                     return true;
                 }

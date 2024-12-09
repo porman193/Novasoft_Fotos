@@ -1,12 +1,10 @@
-﻿using System.IO.Compression;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.Globalization;
+using System.IO.Compression;
 using CasaToro.Novasoft.Fotos.Data;
 using CasaToro.Novasoft.Fotos.Models;
-using Microsoft.CodeAnalysis.Elfie.Serialization;
-using System.Globalization;
-using CsvHelper;
 using CsvHelper.Configuration;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OfficeOpenXml;
 
 namespace CasaToro.Novasoft.Fotos.Controllers
@@ -109,6 +107,7 @@ namespace CasaToro.Novasoft.Fotos.Controllers
                 ViewBag.SelectedBusinessUnit = businessUnit;
                 ViewBag.SelectedHasCard = hasCard;
 
+                TempData["MenuState"] = "filtrar";
                 return View("Index", employees);
             }
             catch (Exception ex)
@@ -201,8 +200,9 @@ namespace CasaToro.Novasoft.Fotos.Controllers
             }
 
             try
-            {   
+            {
                 ViewBag.Filename = file.FileName;
+                TempData["MenuState"] = "cargar";
                 var fileExtension = Path.GetExtension(file.FileName).ToLower();
                 var processedIds = new HashSet<string>();
 
@@ -268,7 +268,7 @@ namespace CasaToro.Novasoft.Fotos.Controllers
                             var rowCount = worksheet.Dimension.Rows;
                             var colCount = worksheet.Dimension.Columns;
 
-                            if (rowCount == 0 || colCount == 0 )
+                            if (rowCount == 0 || colCount == 0)
                             {
                                 ViewBag.ErrorMessage = "La hoja de cálculo está vacía.";
                                 return View("Index");
@@ -343,7 +343,6 @@ namespace CasaToro.Novasoft.Fotos.Controllers
                                     // Actualizar las propiedades de la entidad existente
                                     existingCard.nameEmployee = nameEmployee;
                                     existingCard.deliveryDate = deliveryDate;
-                                    existingCard.registrationDate = DateTime.Now;
                                 }
                                 else
                                 {

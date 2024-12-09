@@ -3,12 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\1000775880\\AppData\\Roaming\\Microsoft\\UserSecrets\\786b434e-2957-46e1-935b-c302a64196dd\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -19,8 +30,16 @@
       "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:data\\logdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|c:\\users\\1000775880\\onedrive - casatoro s.a\\documentos\\casatoro.novasoft.fotos\\views\\employee\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5ECB7E26-D463-4150-B80B-591DE5F96F9C}|CasaToro.Novasoft.Fotos.csproj|solutionrelative:views\\employee\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,72 +49,130 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "Models\\Card.cs",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Models\\Card.cs",
+              "RelativeToolTip": "Models\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T14:56:59.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LogDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Data\\LogDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\LogDbContext.cs",
-              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Data\\LogDbContext.cs",
-              "RelativeToolTip": "Data\\LogDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T13:51:29.727Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "wwwroot\\css\\style.css",
-              "ViewState": "AgIAAAwBAAAAAAAAAAAUwDQBAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-02T22:00:26.325Z",
+              "WhenOpened": "2024-12-09T13:43:59.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\1000775880\\AppData\\Roaming\\Microsoft\\UserSecrets\\786b434e-2957-46e1-935b-c302a64196dd\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\786b434e-2957-46e1-935b-c302a64196dd\\secrets.json",
+              "ToolTip": "C:\\Users\\1000775880\\AppData\\Roaming\\Microsoft\\UserSecrets\\786b434e-2957-46e1-935b-c302a64196dd\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\786b434e-2957-46e1-935b-c302a64196dd\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-06T15:07:39.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-06T15:03:41.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-06T14:29:39.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Views\\Employee\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Error.cshtml",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Views\\Employee\\Error.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T22:18:35.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T14:56:59.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LogDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Data\\LogDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\LogDbContext.cs",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Data\\LogDbContext.cs",
+              "RelativeToolTip": "Data\\LogDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T13:51:29.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAE0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-02T22:00:26.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Views\\Employee\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Employee\\Index.cshtml",
               "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Views\\Employee\\Index.cshtml",
               "RelativeToolTip": "Views\\Employee\\Index.cshtml",
-              "ViewState": "AgIAALgAAAAAAAAAAAAAANUAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAFwAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T18:52:51.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T18:52:51.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\1000775880\\OneDrive - CASATORO S.A\\Documentos\\CasaToro.Novasoft.Fotos\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAE4BAAAAAAAAAAAEwAYBAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAwwIMAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T18:52:30.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T18:52:30.274Z"
             }
           ]
         }

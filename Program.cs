@@ -1,6 +1,6 @@
+using CasaToro.Novasoft.Fotos.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using CasaToro.Novasoft.Fotos.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

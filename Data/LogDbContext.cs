@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using CasaToro.Novasoft.Fotos.Models;
+﻿using CasaToro.Novasoft.Fotos.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CasaToro.Novasoft.Fotos.Data
 {

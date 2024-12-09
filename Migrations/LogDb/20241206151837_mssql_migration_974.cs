@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace CasaToro.Novasoft.Fotos.Migrations.LogDb
 {
     /// <inheritdoc />
-    public partial class mssql_migration_744 : Migration
+    public partial class mssql_migration_974 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,6 +26,20 @@ namespace CasaToro.Novasoft.Fotos.Migrations.LogDb
                 {
                     table.PrimaryKey("PK_NovasoftFotos_LogDescargas", x => x.id_log);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "NovasoftFotos_RegistroCarnet",
+                columns: table => new
+                {
+                    id_emple = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    nombre_emple = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    fecha_entrega = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    fecha_registro = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NovasoftFotos_RegistroCarnet", x => x.id_emple);
+                });
         }
 
         /// <inheritdoc />
@@ -34,6 +47,9 @@ namespace CasaToro.Novasoft.Fotos.Migrations.LogDb
         {
             migrationBuilder.DropTable(
                 name: "NovasoftFotos_LogDescargas");
+
+            migrationBuilder.DropTable(
+                name: "NovasoftFotos_RegistroCarnet");
         }
     }
 }

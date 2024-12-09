@@ -58,8 +58,11 @@
     height: 90vh;
     overflow: hidden;
     border-radius: 0px 20px 20px 0px;
-    /*transform: translateX(-100%);*/
-    transition: .4s ease;
+    transition: 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
 }
 
 
@@ -74,11 +77,6 @@
 .hide-icon {
     background-color: aliceblue;
 }
-    
-
-.custom-lbg:hover {
-    left: 0;
-}
 
 .custom-imgbg {
     position: relative;
@@ -86,6 +84,7 @@
     overflow: hidden;
     padding: 20px;
     z-index: 1;
+    transition: all 0.5s;
 }
 
 .custom-imgbg::before {
@@ -295,8 +294,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     padding-top: 5%;
+    transition: all 0.3s ease-in-out;
 }
 
 .custom-filename {
@@ -307,4 +307,37 @@
     padding: 0.2rem;
     border-radius: 7px 0px 0px 7px;
     border-right: 1px solid;
+}
+
+.custom-consultar-link-container {
+    width: 90%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.custom-consultar-link-container a {
+     color: white;
+     text-decoration: none;
+     transition: all 0.3s ease-in-out;
+ }
+
+
+.custom-cargar-link-container {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-cargar-link-container a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.8s;
+    font-size:1.5rem;
+}
+
+.custom-cargar-link-container a:hover {
+    color: #DEDEDE;
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("786b434e-2957-46e1-935b-c302a64196dd")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasaToro.Novasoft.Fotos")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6854449ff3fed8195c6706aa57d2d1c3a4e6ddf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CasaToro.Novasoft.Fotos")]

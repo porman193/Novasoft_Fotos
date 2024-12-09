@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace CasaToro.Novasoft.Fotos.Migrations
 {
     /// <inheritdoc />
-    public partial class mssql_migration_717 : Migration
+    public partial class mssql_migration_324 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

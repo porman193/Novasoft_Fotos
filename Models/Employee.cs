@@ -7,14 +7,14 @@ namespace CasaToro.Novasoft.Fotos.Models
     public class Employee
     {
         [Key]
-        [Column ("cod_emp")]
-        public  string? idEmployee { get; set; }
+        [Column("cod_emp")]
+        public string? idEmployee { get; set; }
 
-        [Column ("ap1_emp")]
+        [Column("ap1_emp")]
         public string? surname1Employee { get; set; }
 
         [Column("ap2_emp")]
-        public  string? surname2Employee { get; set; }
+        public string? surname2Employee { get; set; }
 
         [Column("nom_emp")]
         public string? nameEmployee { get; set; }
